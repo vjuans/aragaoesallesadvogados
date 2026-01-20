@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aragão e Salles Advogados - Direito de Família</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero Section */
+        /* Hero Section */
+        /* Hero Section */
+        .hero {
+            background: #0f1c2e;
+            color: white;
+            padding: 120px 24px 140px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(99, 135, 170, 0.08) 40px, rgba(99, 135, 170, 0.08) 41px),
+                repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(99, 135, 170, 0.08) 40px, rgba(99, 135, 170, 0.08) 41px);
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(15, 28, 46, 0.6);
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(99, 135, 170, 0.2);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        .trust-badge::before {
+            content: '🛡️';
+            font-size: 16px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 72px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        .hero .subtitle {
+            font-size: 19px;
+            margin-bottom: 48px;
+            color: #a8b9cf;
+            font-weight: 400;
+            line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 64px;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #d4af37;
+            color: #1a1a1a;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-primary::after {
+            content: '→';
+            font-size: 18px;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            background: #c9a532;
+            box-shadow: 0 6px 28px rgba(212, 175, 55, 0.4);
+        }
+
+        .cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: #ffffff;
+            padding: 18px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(168, 185, 207, 0.3);
+        }
+
+        .cta-secondary:hover {
+            background: rgba(168, 185, 207, 0.1);
+            border-color: rgba(168, 185, 207, 0.5);
+        }
+
+        .hero-divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(168, 185, 207, 0.2);
+            margin-bottom: 48px;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero-metric {
+            text-align: center;
+        }
+
+        .hero-metric-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1;
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .hero-metric-label {
+            font-size: 14px;
+            color: #a8b9cf;
+            font-weight: 400;
+            letter-spacing: 0.3px;
+        }
+
+        /* Pain Section */
+        .pain {
+            padding: 120px 24px;
+            background: #f8f9fa;
+        }
+
+        .pain h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 64px;
+            color: #1e3a5f;
+            letter-spacing: -0.02em;
+            max-width: 600px;
+        }
+
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .pain-card {
+            padding: 40px;
+            border-radius: 12px;
+            background: white;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-4px);
+            border-color: #c2a471;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .pain-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .pain-card p {
+            color: #5a6c7d;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 120px 24px;
+            background: white;
+        }
+
+        .solution h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 80px;
+            color: #1e3a5f;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature {
+            padding: 48px 40px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #c2a471;
+            transition: all 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            border-left-color: #1e3a5f;
+        }
+
+        .feature h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .feature p {
+            color: #5a6c7d;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* Social Proof */
+        .proof {
+            padding: 120px 24px;
+            background: #f8f9fa;
+        }
+
+        .proof h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 64px;
+            color: #1e3a5f;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto 80px;
+            text-align: center;
+        }
+
+        .metric {
+            padding: 32px 24px;
+        }
+
+        .metric-number {
+            font-size: 56px;
+            font-weight: 700;
+            color: #c2a471;
+            margin-bottom: 8px;
+        }
+
+        .metric p {
+            color: #5a6c7d;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            border-color: #c2a471;
+        }
+
+        .testimonial-text {
+            margin-bottom: 24px;
+            color: #2c3e50;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1e3a5f;
+            font-size: 15px;
+        }
+
+        .testimonial-date {
+            color: #8899a8;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 120px 24px;
+            background: white;
+        }
+
+        .faq h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 64px;
+            color: #1e3a5f;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            margin-bottom: 16px;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: #c2a471;
+        }
+
+        .faq-question {
+            padding: 28px 32px;
+            font-weight: 600;
+            font-size: 17px;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #1e3a5f;
+        }
+
+        .faq-question:hover {
+            color: #c1a16a;
+        }
+
+        .faq-answer {
+            padding: 0 32px 28px;
+            color: #5a6c7d;
+            line-height: 1.8;
+            display: none;
+        }
+
+        /* Values Section */
+        .values {
+            padding: 120px 24px;
+            background: #f8f9fa;
+        }
+
+        .values h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 64px;
+            color: #1e3a5f;
+            letter-spacing: -0.02em;
+            text-align: center;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 32px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            border-color: #c2a471;
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 24px;
+            color: white;
+        }
+
+        .value-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1e3a5f;
+        }
+
+        .value-card p {
+            color: #5a6c7d;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            padding: 120px 24px;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(194, 164, 113, 0.15) 0%, transparent 70%);
+        }
+
+        .final-cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .final-cta h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .final-cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            margin-top: 48px;
+            padding-top: 48px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .contact-info h3 {
+            font-size: 18px;
+            margin-bottom: 24px;
+            opacity: 0.8;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a2332;
+            color: white;
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.7;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer strong {
+            opacity: 1;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero .subtitle {
+                font-size: 18px;
+            }
+
+            .pain h2, .solution h2, .proof h2, .faq h2, .values h2, .final-cta h2 {
+                font-size: 32px;
+            }
+
+            .cta-primary {
+                padding: 16px 32px;
+                font-size: 15px;
+            }
+
+            .hero {
+                padding: 60px 24px 80px;
+            }
+
+            .pain, .solution, .proof, .faq, .values, .final-cta {
+                padding: 80px 24px;
+            }
+
+            .metric-number {
+                font-size: 48px;
+            }
+
+            .feature {
+                padding: 32px 24px;
+            }
+            .values-grid {
+                grid-template-columns: 1fr; /* 1 coluna no mobile */
+                gap: 20px;
+                max-width: 520px; /* tamanho padrão e centralizado */
+                margin: 0 auto;
+            }
+
+            .value-card {
+                padding: 28px 20px; /* ajusta respiro no mobile */
+            }
+
+            .value-card h3 {
+                font-size: 18px;
+            }
+
+            .value-card p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="trust-badge">⚖ OAB/SP · +10 Anos de Experiência</div>
+                <h1>Proteja sua família com quem entende</h1>
+                <p class="subtitle">Soluções completas em Direito de Família para você seguir em frente com segurança e dignidade</p>
+                <a href="#contato" class="cta-primary">Agende sua Consulta</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="pain">
+        <div class="container">
+            <h2>Você não está sozinho(a) nesse momento</h2>
+            <div class="pain-points">
+                <div class="pain-card">
+                    <h3>Processo de divórcio complicado?</h3>
+                    <p>Entendemos que separações são dolorosas. Tornamos o processo mais rápido, justo e com menos desgaste emocional para você e sua família.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Preocupado com a guarda dos filhos?</h3>
+                    <p>Lutamos pelo melhor interesse das crianças e garantimos acordos que protegem o bem-estar de quem você mais ama.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Pensão alimentícia injusta?</h3>
+                    <p>Revisamos valores desatualizados e buscamos acordos equilibrados que respeitam a realidade financeira de todos os envolvidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2>Como ajudamos você a recomeçar</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Divórcio Consensual ou Litigioso</h3>
+                    <p>Conduzimos todo o processo com agilidade, seja acordo amigável ou disputa judicial, sempre protegendo seus direitos e buscando a solução mais adequada para o seu caso.</p>
+                </div>
+                <div class="feature">
+                    <h3>Guarda e Convivência Familiar</h3>
+                    <p>Elaboramos planos de convivência que priorizam o desenvolvimento saudável das crianças e seus vínculos afetivos, garantindo acordos que beneficiam toda a família.</p>
+                </div>
+                <div class="feature">
+                    <h3>Pensão Alimentícia e Partilha de Bens</h3>
+                    <p>Calculamos valores justos e organizamos a divisão patrimonial de forma transparente, ética e legal, sempre respeitando os direitos de todos os envolvidos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values -->
+    <section class="values">
+        <div class="container">
+            <h2>Por que nos escolher?</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Transparência</h3>
+                    <p>Prestamos assessoramento jurídico transparente e de qualidade, sempre mantendo você informado sobre cada etapa do processo.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Confiabilidade</h3>
+                    <p>Trabalhamos com total confiabilidade na troca de informações jurídicas, garantindo sigilo absoluto e segurança.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">⚖️</div>
+                    <h3>Ética Profissional</h3>
+                    <p>Atuamos sempre com base nos princípios éticos e morais, tratando cada caso com justiça e respeito às normas legais.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🛡️</div>
+                    <h3>Proteção Legal</h3>
+                    <p>Garantimos que a lei seja cumprida e que você tenha a proteção jurídica necessária em qualquer situação que enfrentar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="proof">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-number">10+</div>
+                    <p>Anos de experiência</p>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">500+</div>
+                    <p>Famílias atendidas</p>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">4.9★</div>
+                    <p>Avaliação Google</p>
+                </div>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Excelente atendimento! Desde o primeiro contato, fui tratada com muito respeito e profissionalismo. A advogada Camila demonstrou grande competência e conhecimento."</p>
+                    <p class="testimonial-author">— Camila Zenaro</p>
+                    <p class="testimonial-date">Fevereiro 2025</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Fui extremamente bem atendido pela Doutora Camila e pela Elisangela. São muito profissionais, trabalham com valores bastante justos e acessíveis."</p>
+                    <p class="testimonial-author">— Netto Feel</p>
+                    <p class="testimonial-date">Novembro 2024</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Minha experiência foi totalmente positiva, pude contar com profissionais muito comprometidas e competentes que sempre me trataram de forma atenciosa!"</p>
+                    <p class="testimonial-author">— Alitha Confecções</p>
+                    <p class="testimonial-date">Novembro 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">Quanto tempo leva um processo de divórcio?</div>
+                    <div class="faq-answer">Divórcios consensuais podem ser finalizados em 30-60 dias. Casos litigiosos variam de 6 meses a 2 anos, dependendo da complexidade. Nossa experiência de mais de 10 anos acelera significativamente o processo.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Quanto custa a consulta inicial?</div>
+                    <div class="faq-answer">A primeira consulta é totalmente gratuita. Nela, avaliamos seu caso, explicamos suas opções legais e apresentamos um orçamento transparente sem compromisso.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Posso perder a guarda dos meus filhos?</div>
+                    <div class="faq-answer">A lei sempre prioriza o melhor interesse da criança. Com nossa orientação especializada, você apresentará evidências sólidas do seu vínculo afetivo e capacidade de cuidado, minimizando riscos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Como funciona a partilha de bens?</div>
+                    <div class="faq-answer">Depende do regime de casamento adotado. Fazemos levantamento patrimonial completo, avaliação de bens e negociação para divisão justa, sempre protegendo seus direitos.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Posso fazer tudo online ou preciso ir ao escritório?</div>
+                    <div class="faq-answer">Oferecemos atendimento híbrido. Consultas iniciais e acompanhamentos podem ser realizados online. Audiências e assinaturas exigem presença física quando necessário por lei.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contato">
+        <div class="final-cta-content">
+            <h2>Pronto para resolver sua situação?</h2>
+            <p>Agende agora sua consulta gratuita e descubra o melhor caminho para sua família</p>
+            <a href="https://wa.me/5519998824797?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta%20gratuita" class="cta-primary">Falar com um Especialista Agora</a>
+            
+            <div class="contact-info">
+                <h3>OUTRAS FORMAS DE CONTATO</h3>
+                <div class="contact-details">
+                    <div class="contact-item">📍 Rua do Parque, 121 - Sumaré/SP</div>
+                    <div class="contact-item">📞 (19) 3873-4797</div>
+                    <div class="contact-item">✉️ recepcao@aragaoesallesadvogados.com.br</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Aragão e Salles Advogados</strong></p>
+            <p>Direito de Família e Sucessões · OAB/SP 370.526 · OAB/SP 499.843</p>
+            <p style="margin-top: 24px;">© 2026 Aragão e Salles. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                const answer = q.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

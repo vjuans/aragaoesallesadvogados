@@ -460,17 +460,35 @@
         }
 
         .value-icon {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin: 0 auto 24px;
-            color: white;
+        width: 64px;
+        height: 64px;
+        background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 24px;
+        color: #fff;
+        box-shadow: 0 10px 20px rgba(30, 58, 95, 0.18);
         }
+
+        /* O SVG herda a cor do container (.value-icon) */
+        .value-icon .icon {
+        width: 28px;
+        height: 28px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        }
+
+        /* Um detalhe premium no hover */
+        .value-card:hover .value-icon {
+        box-shadow: 0 16px 30px rgba(30, 58, 95, 0.22);
+        transform: translateY(-1px);
+        transition: all 0.3s ease;
+        }
+
 
         .value-card h3 {
             font-size: 20px;
@@ -685,33 +703,63 @@
     </section>
 
     <!-- Values -->
-    <section class="values">
-        <div class="container">
-            <h2>Por que nos escolher?</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">💎</div>
-                    <h3>Transparência</h3>
-                    <p>Prestamos assessoramento jurídico transparente e de qualidade, sempre mantendo você informado sobre cada etapa do processo.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🤝</div>
-                    <h3>Confiabilidade</h3>
-                    <p>Trabalhamos com total confiabilidade na troca de informações jurídicas, garantindo sigilo absoluto e segurança.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">⚖️</div>
-                    <h3>Ética Profissional</h3>
-                    <p>Atuamos sempre com base nos princípios éticos e morais, tratando cada caso com justiça e respeito às normas legais.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">🛡️</div>
-                    <h3>Proteção Legal</h3>
-                    <p>Garantimos que a lei seja cumprida e que você tenha a proteção jurídica necessária em qualquer situação que enfrentar.</p>
-                </div>
-            </div>
+<section class="values">
+  <div class="container">
+    <h2>Por que nos escolher?</h2>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">
+          <!-- Eye (Transparência) -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M2.25 12s3.75-7.5 9.75-7.5S21.75 12 21.75 12s-3.75 7.5-9.75 7.5S2.25 12 2.25 12Z"/>
+            <path d="M12 15.75A3.75 3.75 0 1 0 12 8.25a3.75 3.75 0 0 0 0 7.5Z"/>
+          </svg>
         </div>
-    </section>
+        <h3>Transparência</h3>
+        <p>Prestamos assessoramento jurídico transparente e de qualidade, sempre mantendo você informado sobre cada etapa do processo.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">
+          <!-- Shield Check (Confiabilidade) -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 2.25 20.25 6v6.6c0 5.1-3.6 9.6-8.25 10.65C7.35 22.2 3.75 17.7 3.75 12.6V6L12 2.25Z"/>
+            <path d="M9 12.75l2.25 2.25L15.75 10.5"/>
+          </svg>
+        </div>
+        <h3>Confiabilidade</h3>
+        <p>Trabalhamos com total confiabilidade na troca de informações jurídicas, garantindo sigilo absoluto e segurança.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">
+          <!-- Scale (Ética) -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 3v18"/>
+            <path d="M5.5 7h13"/>
+            <path d="M7 7 4 13h6L7 7Z"/>
+            <path d="M17 7 14 13h6l-3-6Z"/>
+            <path d="M8 21h8"/>
+          </svg>
+        </div>
+        <h3>Ética Profissional</h3>
+        <p>Atuamos sempre com base nos princípios éticos e morais, tratando cada caso com justiça e respeito às normas legais.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon" aria-hidden="true">
+          <!-- Shield (Proteção Legal) -->
+          <svg viewBox="0 0 24 24" class="icon">
+            <path d="M12 2.25 20.25 6v6.6c0 5.1-3.6 9.6-8.25 10.65C7.35 22.2 3.75 17.7 3.75 12.6V6L12 2.25Z"/>
+          </svg>
+        </div>
+        <h3>Proteção Legal</h3>
+        <p>Garantimos que a lei seja cumprida e que você tenha a proteção jurídica necessária em qualquer situação que enfrentar.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Social Proof -->
     <section class="proof">
@@ -727,7 +775,7 @@
                     <p>Famílias atendidas</p>
                 </div>
                 <div class="metric">
-                    <div class="metric-number">4.9★</div>
+                    <div class="metric-number">5.0★</div>
                     <p>Avaliação Google</p>
                 </div>
             </div>
